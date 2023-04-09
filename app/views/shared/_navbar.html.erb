@@ -1,0 +1,9 @@
+<h2>Tone's blog about everythin' & nothin'</h2>
+  <%= button_to "Sign in", new_user_session_path %>
+  <% if user_signed_in? %>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Profile", edit_user_registration_path %>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+    <%= link_to "Create new blog", new_blog_post_path, method: :new %>
+  <% end %>
+<hr>
