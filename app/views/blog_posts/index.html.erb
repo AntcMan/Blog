@@ -1,8 +1,8 @@
-<h1>Dis my home page, homie</h1>
+<h3>Dis my home page, homie</h3>
 
 <% @blog_posts.each do |blog_post| %>
   <div>
-    <h2><%= link_to blog_post.title, blog_post %></h2>
+    <h4><%= link_to blog_post.title, blog_post %></h4>
     <p><%= blog_post.body %></p>
   </div>
 <% end %>
