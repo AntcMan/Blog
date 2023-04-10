@@ -1,6 +1,7 @@
 <% @blog_posts.each do |blog_post| %>
   <div>
-    <h4><%= link_to blog_post.title, blog_post %></h4>
+    <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline font-bold hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
     <p><%= blog_post.body %></p>
+    <p class="font-light text-xs italic">Published: <%= time_ago_in_words(blog_post.created_at) %></p>
   </div>
 <% end %>
