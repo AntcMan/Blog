@@ -1,5 +1,5 @@
 <div class= "py-6 px-8 md:px-0">
-  <h1>Tone's blog about everythin'</h1>
+  <h1>Tone's blog about my coding journey<span class= "text-lime-800">.</span></h1>
 </div>
   <div class="grid grid-cols-4 gap 4 px-8 md:px-0">
     <% if user_signed_in? %>
@@ -14,7 +14,7 @@
       </div>
       <div class= "px-1">
         <% unless current_page?(root_path) %>
-          <%= link_to "Home", root_path, class: "hover:bg-lime-900 no-underline hover:underline-none text-lime-900 font-semibold hover:text-stone-200 py-2 px-4 rounded" %>
+          <%= link_to "Home", root_path, class: "hover:bg-lime-900 no-underline hover:underline-none font-semibold hover:text-stone-200 py-2 px-4 rounded transition duration-400" %>
         <% end %>
       </div>
       <% else %>

@@ -1,4 +1,8 @@
-<% if user_signed_in? %>
-  <%= link_to 'Edit this blog', edit_blog_post_path(@blog_post) %>
-  <%= button_to 'Delete blog post', @blog_post, method: :delete, data: {turbo_confirm: "Are you sure"}  %>
-<% end %>
+<div class="flex grid grid-cols-2">
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "text-center no-underline hover:underline font-normal" %>
+    <div class="flex justify-center items-center">
+      <%= button_to 'Delete', @blog_post, method: :delete, data: {turbo_confirm: "Are you sure"}, class: "no-underline hover:underline text-yellow-900"  %>
+    </div>
+  <% end %>
+</div>
