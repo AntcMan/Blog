@@ -1,9 +1,24 @@
-<h2>Tone's blog about everythin' & nothin'</h2>
-  <%= button_to "Sign in", new_user_session_path %>
-  <% if user_signed_in? %>
-    <%= link_to "Home", root_path %>
-    <%= link_to "Profile", edit_user_registration_path %>
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-    <%= link_to "Create new blog", new_blog_post_path, method: :new %>
-  <% end %>
+<div class= "py-6 px-8 md:px-0">
+  <h1>Tone's blog about everythin'</h1>
+</div>
+  <div class="grid grid-cols-4 gap 4 px-8 md:px-0">
+    <% if user_signed_in? %>
+      <div class="px-1">
+        <%= link_to "Edit profile", edit_user_registration_path, class: "no-underline hover:underline font-medium" %>
+      </div>
+      <div class="px-1">
+        <%= link_to "New blog", new_blog_post_path, method: :new, class: "no-underline hover:underline font-medium" %>
+      </div>
+      <div class="px-1">
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "no-underline hover:underline font-medium" %>
+      </div>
+      <div class= "px-1">
+        <% unless current_page?(root_path) %>
+          <%= link_to "Home", root_path, class: "hover:bg-lime-900 no-underline hover:underline-none text-lime-900 font-semibold hover:text-stone-200 py-2 px-4 rounded" %>
+        <% end %>
+      </div>
+      <% else %>
+        <%= button_to "Sign in", new_user_session_path %>
+    <% end %>
+  </div>
 <hr>

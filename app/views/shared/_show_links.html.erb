@@ -1,0 +1,4 @@
+<% if user_signed_in? %>
+  <%= link_to 'Edit this blog', edit_blog_post_path(@blog_post) %>
+  <%= button_to 'Delete blog post', @blog_post, method: :delete, data: {turbo_confirm: "Are you sure"}  %>
+<% end %>
