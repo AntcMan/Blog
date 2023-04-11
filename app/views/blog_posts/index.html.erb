@@ -1,7 +1,12 @@
-<% @blog_posts.each do |blog_post| %>
-  <div>
-    <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline font-bold hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
-    <p><%= blog_post.body %></p>
-    <p class="font-light text-xs italic">Published: <%= time_ago_in_words(blog_post.created_at) %></p>
+<section>
+  <div class="blogs">
+    <% @blog_posts.each do |blog_post| %>
+      <div>
+        <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline font-semibold text-2xl font-thin uppercase font-serif hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
+        <p class="font-light text-xs italic pt-1 pb-4">Published: <%= time_ago_in_words(blog_post.created_at) %></p>
+        <p class="pb-8 font-thin"><%= truncate(blog_post.body, length: 130) %> <%= link_to "read more", blog_post_path(blog_post),
+             class: "font-sans font-medium hover:text-lime-900 transition duration-400" %></p>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</section>

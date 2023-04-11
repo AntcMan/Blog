@@ -10,7 +10,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        serif: ['Times new roman'],
+        sans: ['Montserrat', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: 400,
+        semibold: 600,
       },
     },
   },

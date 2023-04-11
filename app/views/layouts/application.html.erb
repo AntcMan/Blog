@@ -11,13 +11,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="mx-auto">
+  <body class="mx-auto md:w-2/4">
     <div>
       <%= render 'shared/navbar' %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-        <div>
-         <%= yield %>
+        <div class="px-10 pb-20 flex flex-wrap md:justify-center">
+          <%= yield %>
         </div>
       </div>
     <%= render 'shared/footer' %>
