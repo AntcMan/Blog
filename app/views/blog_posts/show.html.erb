@@ -4,6 +4,6 @@
   </div>
   <h1 class="text-lime-800 no-underline font-semibold text-2xl font-thin uppercase font-serif"><%= @blog_post.title %></h1>
   <p class="font-light text-xs italic pt-1 pb-4">Published: <%= time_ago_in_words(@blog_post.created_at) %></p>
-  <p class="pb-8 font-thin"><%= @blog_post.body %><p>
+  <p class="pb-8 font-thin"><%= @blog_post.content %><p>
   <%= render 'shared/show_links' %>
 </section>
