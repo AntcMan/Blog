@@ -1,5 +1,5 @@
-<section>
-  <div class="blogs mb-6">
+<section class="mx-auto md:w-2/4">
+  <div class="blogs mb-6 px-10 pb-20 flex flex-wrap md:justify-center">
     <% @blog_posts.each do |blog_post| %>
       <div>
         <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline font-semibold text-2xl font-thin uppercase font-serif hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
