@@ -4,8 +4,10 @@
       <div>
         <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline font-semibold text-2xl font-thin uppercase font-serif hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
         <p class="font-light text-xs italic pt-1 pb-4">published: <%= time_ago_in_words(blog_post.created_at) %></p>
-        <p class="pb-10 font-thin"><%= truncate(blog_post.body, length: 130) %> <%= link_to "read more", blog_post_path(blog_post),
-            class: "font-sans font-medium hover:text-yellow-900 hover:underline transition duration-300" %></p>
+          <div class="pb-10 font-thin">
+            <%= blog_post.content %>
+          </div>
+        <%# <%= link_to "read more", blog_post_path(blog_post), class: "font-sans font-medium hover:text-yellow-900 hover:underline transition duration-300" %>
       </div>
     <% end %>
   </div>
