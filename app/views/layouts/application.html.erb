@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>IYRTIAMI by anthony marion</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,13 +12,11 @@
   </head>
 
  <body>
-      <%= render 'shared/navbar' %>
-    <div class="mx-auto md:w-2/4">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-        <div class="px-10 pb-20 flex flex-wrap md:justify-center">
-          <%= yield %>
-        </div>
+  <%= render 'shared/navbar' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+      <div>
+        <%= yield %>
       </div>
     <%= render 'shared/footer' %>
   </body>
