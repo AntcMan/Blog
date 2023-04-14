@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="share"
 export default class extends Controller {
-  static targets = ["url", "title,"];
+  static targets = ["url", "title"];
 
   connect() {
     console.log("Connected to the share controller");
