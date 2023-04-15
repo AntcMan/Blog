@@ -1,6 +1,6 @@
 <section class="mx-auto md:w-2/4 px-10">
   <div class="bach-btn pb-4">
-    <%= link_to "> back home", root_path, class: "no-underline text-center text-sm font-sans font-thin hover:text-lime-900 transition duration-400" %>
+    <%= link_to "< back home", root_path, class: "no-underline text-center text-sm font-sans font-thin hover:text-lime-900 transition duration-400" %>
   </div>
 
   <div class="post-content" data-controller="share" data-share-url-value="<%= blog_post_url(@blog_post)%>" >
@@ -12,10 +12,11 @@
       <p class="font-light text-xs italic pt-1 pb-4">Published: <%= time_ago_in_words(@blog_post.created_at) %></p>
     </div>
 
-    <div class="post-body pb-8 font-thin" ">
+    <div class="post-body pb-10 font-thin">
       <p><%= @blog_post.content %></p>
     </div>
       <%= button_to "Share Post", "", data: {action: "click->share#share"} %> <%# # SHARE BUTTON %>
   </div>
+  <%= render 'shared/blog_pagination' %>
   <%= render 'shared/show_links' %>
 </section>
