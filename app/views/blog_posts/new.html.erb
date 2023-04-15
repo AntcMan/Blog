@@ -1,3 +1,8 @@
-<h1>Create new blog post</h1>
-
-<%= render partial: "form", locals: {blog_post: @blog_post} %>
+<section class="mx-auto md:w-3/4 px-10">
+  <new-blog-form>
+    <h1 class= "text-lime-800 no-underline font-semibold text-2xl font-thin uppercase font-serif mb-4">Create new blog post</h1>
+      <div class="blog-body pb-40">
+        <%= render partial: "form", locals: {blog_post: @blog_post} %>
+      </div>
+  </new-blog-form>
+</section>

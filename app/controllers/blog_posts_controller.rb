@@ -8,6 +8,8 @@ class BlogPostsController < ApplicationController
   end
 
   def show
+    @next_blog_post = @blog_post.next
+    @prev_blog_post = @blog_post.prev
   end
 
   def new
