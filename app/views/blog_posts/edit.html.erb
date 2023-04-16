@@ -1,10 +1,11 @@
 <section class="mx-auto md:w-3/4 px-10">
-  <div class="edit-body">
+  <div class="edit-body mt-4">
     <h1 class="text-lime-800 no-underline font-semibold text-2xl font-thin uppercase font-serif mb-4">Edit blog post</h1>
-    <%= render partial: "form", locals: {blog_post: @blog_post} %>
-
-    <div class="btn-del w-1/4 mt-4 bg-transparent hover:bg-red-500 text-sm text-red-700 text-center font-medium hover:text-white py-2 border border-red-500 hover:border-transparent rounded">
-      <%= button_to "Delete Blog", @blog_post, method: :delete, data: {turbo_confirm: "Are you sure?"} %>
+    <div class="edit-form mb-40">
+     <%= render partial: "form", locals: {blog_post: @blog_post} %>
+      <div class="btn-del w-1/4 mt-4 bg-transparent hover:bg-red-500 text-sm text-red-700 text-center font-medium hover:text-white py-2 border border-red-500 hover:border-transparent rounded">
+        <%= button_to "Delete Blog", @blog_post, method: :delete, data: {turbo_confirm: "Are you sure?"} %>
+      </div>
     </div>
   </div>
 </section>
