@@ -15,5 +15,11 @@ export default class extends Controller {
       url: this.data.get("urlValue"),
     };
     console.log(shareData);
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      console.error("Share error:", err)
+      alert("Failed to share blog post")
+    };
   }
  }
