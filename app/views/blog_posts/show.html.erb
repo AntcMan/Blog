@@ -1,4 +1,4 @@
-<section class="mx-auto md:w-2/4 px-10">
+<section class="mx-auto md:w-2/4 px-10 mb-20">
   <div class="bach-btn pb-4">
     <%= link_to "< back home", root_path, class: "no-underline text-center text-sm font-sans font-thin hover:text-lime-900 transition duration-400" %>
   </div>
@@ -15,8 +15,8 @@
     <div class="post-body pb-10 font-thin">
       <p><%= @blog_post.content %></p>
     </div>
-      <%= button_to "Share Post", "", data: {action: "click->share#share"} %> <%# # SHARE BUTTON %>
+      <%= button_to "Share Post", "", data: {action: "click->share#share"} %>
+      <%= render 'shared/blog_pagination' %>
   </div>
-  <%= render 'shared/blog_pagination' %>
   <%= render 'shared/show_links' %>
 </section>
