@@ -14,9 +14,14 @@
 
     <div class="post-body pb-10 font-thin">
       <p><%= @blog_post.content %></p>
+      <% if user_signed_in? %>
+      <div class="py-6">
+        <%= render 'shared/show_links' %>
+      </div>
+        <% else %>
+        <%= button_to "Share Post", "", data: {action: "click->share#share"} %>
+        <%= render 'shared/blog_pagination' %>
+      <% end %>
     </div>
-      <%= button_to "Share Post", "", data: {action: "click->share#share"} %>
-      <%= render 'shared/blog_pagination' %>
   </div>
-  <%= render 'shared/show_links' %>
 </section>
