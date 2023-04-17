@@ -1,12 +1,12 @@
-<section class="flex pt-10 pb-20">
-  <btn-previous class="w-1/2 text-center border-r border-gray-200 no-underline sm:text-center text-sm py-8 font-sans font-thin font-semibold hover:text-lime-900 transition duration-400">
+<section class="flex pt-8 pb-16">
+  <btn-previous class="w-1/2 text-center border-r border-gray-200 no-underline sm:text-center text-sm py-4 font-sans font-thin font-semibold hover:text-lime-900 transition duration-400">
     <p>
-      <%= link_to "prev", @prev_blog_post if !@prev_blog_post.nil?%>
+      <%= link_to "< prev", @prev_blog_post if !@prev_blog_post.nil?%>
     </p>
   </btn-previous>
-  <btn-next class="w-1/2 text-center no-underline sm:text-center text-sm py-8 font-sans font-thin font-semibold hover:text-lime-900 transition duration-400">
+  <btn-next class="w-1/2 text-center no-underline sm:text-center text-sm py-4 font-sans font-thin hover:text-lime-900 transition duration-400">
     <p>
-      <%= link_to "next", @next_blog_post if !@next_blog_post.nil?%>
+      <%= link_to "next >", @next_blog_post if !@next_blog_post.nil?%>
     </p>
   </btn-next>
 </section>
