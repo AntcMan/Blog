@@ -19,7 +19,9 @@
         <%= render 'shared/show_links' %>
       </div>
         <% else %>
-        <%= button_to "Share Post", "", data: {action: "click->share#share"} %>
+        <div class="btn-share py-4 no-underline text-sm font-sans font-thin hover:text-lime-900 transition duration-400">
+          <%= button_to "> share post", "", data: {action: "click->share#share"} %>
+        </div>
         <%= render 'shared/blog_pagination' %>
       <% end %>
     </div>
