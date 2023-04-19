@@ -176,6 +176,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    reading_time (0.1.0)
     regexp_parser (2.7.0)
     reline (0.3.3)
       io-console (~> 0.5)
@@ -243,6 +244,7 @@ DEPENDENCIES
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
+  reading_time
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
