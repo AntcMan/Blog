@@ -9,8 +9,12 @@
         <%= @blog_post.title %>
       </h1>
       <p class="font-light text-xs italic pt-1 pb-4">
-        published: <%= time_ago_in_words(@blog_post.created_at) %>
+        published: <%= time_ago_in_words(@blog_post.created_at) %> ago
       </p>
+        <div class="cover-image">
+          <%= image_tag @blog_post.cover_image %>
+        </div>
+          <p>caption:<%= @blog_post.caption %></p>
       <#p>
         <%# estimated read time:<%= @blog_post.content.reading_time %>
       <#/p>
