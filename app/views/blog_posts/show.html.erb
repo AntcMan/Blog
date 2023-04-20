@@ -12,9 +12,11 @@
         published: <%= time_ago_in_words(@blog_post.created_at) %> ago
       </p>
         <div class="cover-image">
-          <%= image_tag @blog_post.cover_image %>
+          <%= image_tag @blog_post.cover_image if @blog_post.cover_image.present? %>
+            <p class="font-light text-xs text-left italic pt-2 pb-4">
+              <%= @blog_post.caption %>
+            </p>
         </div>
-          <p>caption:<%= @blog_post.caption %></p>
       <#p>
         <%# estimated read time:<%= @blog_post.content.reading_time %>
       <#/p>
