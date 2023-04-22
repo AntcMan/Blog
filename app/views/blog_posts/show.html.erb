@@ -8,8 +8,15 @@
       <h1 class="text-lime-800 no-underline font-semibold text-2xl font-thin uppercase font-serif md:text-3xl">
         <%= @blog_post.title %>
       </h1>
-      <p class="font-light text-xs italic pt-1 pb-4">
+      <p class="font-thin text-xs pt-1 pb-2">
         published: <%= time_ago_in_words(@blog_post.created_at) %> ago
+      </p>
+      <p class="text-xs text-left pt-1 pb-4 font-thin"> time:
+        <%= content_tag(:span, "", data:{
+        # action: "reader#readingTime",
+        # target: "reader.readingTime",
+        reader_target: "readingTime"
+      }) %>
       </p>
       <div class="cover-image">
         <%= image_tag @blog_post.cover_image, class: "h-320 w-600" if @blog_post.cover_image.present? %>
@@ -20,6 +27,9 @@
     </div>
     <div class="post-body pb-10 font-thin">
       <p><%= @blog_post.content %></p>
+      <%= content_tag(:div, @blog_post.content, data: {
+        reader_target: "content"
+      }) %>
       <% if user_signed_in? %>
       <div class="py-6">
         <%= render 'shared/show_links' %>
