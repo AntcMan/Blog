@@ -1,9 +1,9 @@
 <section class="mx-auto md:w-1/2 mb-20">
   <div class="blogs mb-6 px-10 pb-20 md:justify-center">
     <% @blog_posts.each do |blog_post| %>
-      <div class="blog-card flex">
+      <div class="blog-card py-2 flex">
         <div class="card-content w-3/4">
-          <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline font-semibold text-xl md:text-2xl font-thin uppercase font-serif hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
+          <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline font-semibold text-xl md:text-2xl font-thin capitalize font-serif hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
             <p class="font-light text-xs italic pt-1 pb-4">published: <%= time_ago_in_words(blog_post.created_at) %> ago</p>
             <div class="pb-10 font-thin font-sans text-medium hidden md:block">
               <%= truncate(blog_post.content.to_plain_text, length: 150, omission: '...') %>
@@ -11,11 +11,12 @@
             </div>
         </div>
 
-        <div class="cover-image w-1/4">
+        <div class="cover-image w-1/4 pb-2">
           <%= link_to image_tag(blog_post.cover_image, class: "h-24 w-24 md:h-36 md:w-36 mt-2 ml-2 shadow-[rgba(0,_0,_0,_0.32)_0px_3px_8px]"),
               blog_post if blog_post.cover_image.present? %>
         </div>
       </div>
+      <hr class="md:hidden">
     <% end %>
   </div>
 </section>
