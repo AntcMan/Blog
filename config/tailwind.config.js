@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Times new roman'],
+        // serif: ['Times new roman'],
         sans: ['Montserrat', 'sans-serif'],
       },
       fontWeight: {
