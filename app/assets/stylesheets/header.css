@@ -1,0 +1,41 @@
+:root{
+	--accent-color: red
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	height: 165vh;
+	background: var(--main-color);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	font-size: 8rem;
+	line-height: 14rem;
+	font-family: 'Open Sans', sans-serif;
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: var(--accent-color);
+}
+
+.heading{
+	height: 14rem;
+	margin-top: calc(100vh / 2 - 7rem);
+	position: absolute;
+	top: 0;
+}
+
+.heading:first-child{
+	color: var(--accent-color);
+}
+
+.heading{
+	transition: transform .3s;
+}
