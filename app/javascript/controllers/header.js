@@ -1,4 +1,4 @@
-import './header.css';
+// import './header.css';
 
 const headings = document.querySelectorAll('.heading');
 let firstRun = true;

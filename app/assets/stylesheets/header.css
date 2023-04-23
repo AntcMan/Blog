@@ -1,41 +1,32 @@
-:root{
-	--accent-color: red
+title {
+  background: white;
+  display:flex;
+  align-items: center;
+  height: 70vh;
 }
 
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	height: 165vh;
-	background: var(--main-color);
+.text-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 4s linear forwards, filling 4s ease-in forwards;
+  font-size: 50px;
+  fill: #000000;
+  stroke: #000000;
+
 }
 
-*{
-	margin: 0;
-	padding: 0;
+.text-line text {
+  font-weight: normal;
+  font-style: normal;
 }
 
-h1{
-	font-size: 8rem;
-	line-height: 14rem;
-	font-family: 'Open Sans', sans-serif;
-	color: transparent;
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: var(--accent-color);
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-.heading{
-	height: 14rem;
-	margin-top: calc(100vh / 2 - 7rem);
-	position: absolute;
-	top: 0;
-}
-
-.heading:first-child{
-	color: var(--accent-color);
-}
-
-.heading{
-	transition: transform .3s;
+@keyframes filling {
+  0%, 90% { fill: black; fill-opacity: 0; }
+  100% { fill: black; fill-opacity: 1; }
 }
