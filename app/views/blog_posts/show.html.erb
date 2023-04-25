@@ -11,7 +11,7 @@
       <p class="font-thin text-xs pt-1 pb-2">
         published: <%= time_ago_in_words(@blog_post.created_at) %> ago
       </p>
-      <p class="text-xs text-left pt-1 pb-4 font-thin"> time:
+      <p class="text-left pt-1 pb-4 font-thin text-xs">
         <%= content_tag(:span, "", data:{
         reader_target: "readingTime"
       }) %>
