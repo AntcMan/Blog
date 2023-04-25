@@ -3,7 +3,7 @@
     <% @blog_posts.each do |blog_post| %>
       <div class="blog-card py-2 flex">
         <div class="card-content w-3/4">
-          <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline text-lg md:text-xl font-extralight capitalize font-sans hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
+          <h3><%= link_to blog_post.title, blog_post, class: "text-lime-800 no-underline text-lg md:text-2xl font-extralight capitalize font-sans hover:text-yellow-900 transition duration-300 hover:underline" %></h3>
             <p class="font-light text-xs italic pt-1 pb-4">published: <%= time_ago_in_words(blog_post.created_at) %> ago</p>
             <div class="pb-10 font-thin font-sans text-medium hidden md:block">
               <%= truncate(blog_post.content.to_plain_text, length: 150, omission: '...') %>
