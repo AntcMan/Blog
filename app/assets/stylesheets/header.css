@@ -8,7 +8,7 @@ title {
 .text-line {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: dash 4s linear forwards, filling 4s ease-in forwards;
+  animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
   font-size: 50px;
   fill: #000000;
   stroke: #000000;
