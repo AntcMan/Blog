@@ -28,10 +28,3 @@ test:
 production:
   <<: *default
   database: blog_production
-
-
-production:
-  <<: *default
-  database: feeling_blue_production
-  username: feeling_blue
-  password: <%= ENV["FEELING_BLUE_DATABASE_PASSWORD"] %>
