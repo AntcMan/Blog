@@ -23,7 +23,7 @@
     <%= form.label :cover_image %>
     <%= cl_image_tag blog_post.cover_image.key, class: "w-1/3" if blog_post.cover_image.present? %>
     <%# <%= image_tag form.file_field :cover_image %> %>
-    <%= f.input :cover_image, as: :file, placeholder: "Insert photo", label: false %>
+    <%= form.input :cover_image, as: :file, placeholder: "Insert photo", label: false %>
   </div>
 
   <div class="mt-4">
