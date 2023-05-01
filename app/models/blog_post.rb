@@ -7,6 +7,7 @@ class BlogPost < ApplicationRecord
   validates :title, presence: true
   validates :content, presence: true
   attribute :published_at, :datetime
+  has_one_attached :photo
 
   extend FriendlyId
   friendly_id :title, use: :slugged

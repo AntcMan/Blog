@@ -21,8 +21,11 @@
 
   <div class="mt-4">
     <%= form.label :cover_image %>
-    <%= image_tag blog_post.cover_image, class: "w-1/3" if blog_post.cover_image.present? %>
-    <%= form.file_field :cover_image %>
+    <%= cl_image_tag blog_post.cover_image, class: "w-1/3" if blog_post.cover_image.present? %>
+    <%= cl_image_tag form.file_field :cover_image %>
+    <%# <%= form.file_field :cover_image, as: :file %> %>
+    <%# <%= f.input :cover_image, as: :file %> %>
+
   </div>
 
   <div class="mt-4">
