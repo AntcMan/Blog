@@ -5,6 +5,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'blog_posts#index'
-  get 'blog_posts/new', to: 'blog_posts#new', as: :new_post
 
 end
