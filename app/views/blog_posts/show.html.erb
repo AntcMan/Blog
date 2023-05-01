@@ -17,7 +17,7 @@
       }) %>
       </p>
       <div class="cover-image">
-        <%= cl_image_tag @blog_post.cover_image, class: "h-320 w-600" if @blog_post.cover_image.present? %>
+        <%= image_tag @blog_post.cover_image, class: "h-320 w-600" if @blog_post.cover_image.present? %>
           <p class="font-light text-xs text-left pt-2 pb-4">
             <%= @blog_post.caption %>
           </p>
