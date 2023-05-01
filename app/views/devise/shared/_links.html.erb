@@ -2,10 +2,10 @@
   <%= link_to "log in", new_session_path(resource_name) %><br />
 <% end %>
 
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "sign up", new_registration_path(resource_name), class: "no-underline text-sm py-5 font-sans font-thin hover:text-lime-900 transition duration-400 pb-4" %><br />
-<% end %>
-<p class="text-sm py-2 font-sans font-thin">- or -</p>
+<%# <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%# <%= link_to "sign up", new_registration_path(resource_name), class: "no-underline text-sm py-5 font-sans font-thin hover:text-lime-900 transition duration-400 pb-4" %><br /> %>
+<%# <% end %> %>
+<%# <p class="text-sm py-2 font-sans font-thin">- or -</#p> %> %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
   <%= link_to "forgot your password?", new_password_path(resource_name), class: "no-underline text-sm py-5 font-sans font-thin hover:text-lime-900 transition duration-400 pt-2"  %><br />
