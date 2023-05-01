@@ -19,7 +19,8 @@
       <%= link_to "Edit profile", edit_user_registration_path, class: "no-underline hover:underline font-medium" %>
     </div>
     <div class="px-1">
-      <%= link_to "New blog", new_blog_post_path, method: :new, class: "no-underline hover:underline font-medium" %>
+      <%# <%= link_to "New blog", new_blog_post_path, method: :new, class: "no-underline hover:underline font-medium" %> %>
+      <%= link_to "New blog", new_blog_post_path, class: "no-underline hover:underline font-medium" %>
     </div>
     <div class="px-1">
       <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "no-underline hover:underline font-medium" %>
