@@ -1,5 +1,4 @@
 title {
-
   display:flex;
   align-items: center;
   height: 70vh;
@@ -9,7 +8,7 @@ title {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-  font-size: 50px;
+  font-size: 36px;
   fill: black;
   stroke: black;
 
