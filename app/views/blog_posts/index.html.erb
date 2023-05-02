@@ -1,12 +1,12 @@
 <section class="mx-auto md:w-1/2 mb-20">
   <div class="blogs mb-6 px-10 pb-20 md:justify-center">
     <% @blog_posts.each do |blog_post| %>
-      <div class="blog-card py-2 flex mb-4">
-        <div class="cover-image w-1/4 pb-3 overflow-hidden">
-          <%= link_to cl_image_tag(blog_post.cover_image.key, class: "rounded-sm h-24 w-24 md:h-36 md:w-36 mt-1 mr-4 shadow-[rgba(0,_0,_0,_0.32)_0px_3px_8px]"),
+      <div class="blog-card py-2 md:flex mb-4">
+        <div class="cover-image pb-3 w-20 h-20 md:w-64 md:h-40 relative">
+          <%= link_to cl_image_tag(blog_post.cover_image.key, class: "rounded-sm absolute inset-0 md:w-3/4 md:h-3/4 object-cover object-center shadow-[rgba(0,_0,_0,_0.32)_0px_3px_8px]"),
               blog_post if blog_post.cover_image.present? %>
         </div>
-        <div class="card-content w-3/4 ml-4">
+        <div class="card-content w-3/4 md:ml-0">
           <h3>
             <%= link_to blog_post.title, blog_post, class: "text-lime-900 no-underline text-lg md:text-2xl font-thin uppercase font-sans hover:text-yellow-900 transition duration-300" %>
           </h3>
